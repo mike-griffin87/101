@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script|Open+Sans:300,400,600")
+
+body
+  margin: 0
+  color: #454545
+  font-family: 'Open Sans', sans-serif
+
+\:root
+  font-size: 8px
+
+h1
+  margin: 0
+  font-family: 'Dancing Script', cursive
+  font-size: 8rem
+
+h3
+  font-family: 'Open Sans', sans-serif
+  font-weight: 400
+  font-size: 1.5rem
+
+p
+  font-size: 2rem
+  font-weight: 300
+
+.story-container
+  display: flex
+
+.image-panel, .text-panel
+  display: flex
+  width: 50vw
+  height: 100vh
+  position: relative
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+
+.image-panel:hover .overlay, .text-panel:hover .overlay
+  opacity: 1
+  pointer-events: default
+
+.image-panel .overlay, .text-panel .overlay
+  width: 100%
+  height: 100%
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.75) 110%)
+  opacity: 0
+  transition: all .25s ease-in-out
+
+.image-panel .image-info
+  position: absolute
+  right: 3rem
+  bottom: 2rem
+  color: white
+
+.text-panel
+  .image-info
+    position: absolute
+    right: 3rem
+    bottom: 2rem
+    color: white
+  position: inherit
+
+.menu-btn
+  outline: none
+  position: absolute
+  cursor: pointer
+  right: 3rem
+  top: 2rem
+  background: white
+  border: 1px solid #454545
+  border-radius: 5px
+  padding: 4px 10px
+  font-size: 2rem
+  font-weight: 300
+  transition: all .25s ease-in-out
+  z-index: 5
+
+.story-text-container
+  width: 100%
+  height: 70vh
+  padding: 10vh 8rem 20vh 8rem
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  &:after
+    content: ''
+    background: linear-gradient(to bottom, transparent 80%, #ff19ff 100%)
+  p
+    line-height: 4.5rem
+  .story-body
+    overflow: scroll
